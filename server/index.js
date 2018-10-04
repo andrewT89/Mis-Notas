@@ -5,7 +5,7 @@ import { mongoDB, port } from './config'
 
 const debug = new Debug('platzi-overflow:root')
 
-// mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise
 
 async function dbStart() {
     await mongoose.connection.openUri(mongoDB, { useNewUrlParser: true, useCreateIndex: true, });
