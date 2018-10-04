@@ -1,3 +1,4 @@
+import * as path from 'path';
 import express from 'express'
 import bodyParser from 'body-parser'
 import { question, auth } from './routes'
@@ -14,6 +15,10 @@ if (process.env.NODE_ENV === 'development') {
         res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, PUT, OPTIONS')
         next()
     })
+}
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(process.cwd(), 'dist')))
 }
 
 app.use('/api/questions', question)
