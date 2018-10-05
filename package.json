@@ -8,8 +8,8 @@
     },
     "scripts": {
         "ng": "ng",
-        "startProd": "NODE_ENV=production node server.js",
-        "start": "concurrently -r \"npm run startser\" \"npm run startclient\"",
+        "start": "NODE_ENV=production node server.js",
+        "startcurrent": "concurrently -r \"npm run startser\" \"npm run startclient\"",
         "startser": "NODE_ENV=development DEBUG=platzi-overflow* nodemon server/index.js --exec babel-node",
         "startclient": "ng serve",
         "test": "ng test",
