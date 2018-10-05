@@ -1,2 +1,2 @@
-require("@babel/polyfill")
-require("./dist/server")
+import "@babel/polyfill";
+import "./dist/server";

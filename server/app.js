@@ -1,4 +1,4 @@
-import * as path from 'path';
+import path from 'path';
 import express from 'express'
 import bodyParser from 'body-parser'
 import { question, auth } from './routes'
@@ -18,7 +18,13 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(process.cwd(), '/dist')))
+    app.use(express.static(path.join(process.cwd(), 'dist')))
+    app.use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', '*')
+        res.setHeader('Access-Control-Allow-Headers', 'Origin, x-Request-With, Content-Type, Accept')
+        res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PATCH, DELETE, PUT, OPTIONS')
+        next()
+    })
 }
 
 app.use('/api/questions', question)
