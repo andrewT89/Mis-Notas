@@ -15,7 +15,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "build": "npm run buildClient && npm run buildServer",
-        "buildClient": "ng build --environments=prod",
+        "buildClient": "ng build --aot -prod",
         "buildServer": "babel server --out-dir dist/server",
         "postinstall": "npm run build"
     },
