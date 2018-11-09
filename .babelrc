@@ -1,4 +1,4 @@
 {
-    "presets": ["es2015"],
-    "plugins": ["babel-plugin-transform-async-to-generator"]
+    "presets": ["es2016"],
+    "plugins": ["transform-async-functions"]
 }
