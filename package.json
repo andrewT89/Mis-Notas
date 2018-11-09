@@ -17,7 +17,7 @@
         "build": "npm run buildClient && npm run buildServer",
         "buildClient": "ng build --environment=prod",
         "buildServer": "babel server --out-dir dist/server",
-        "postinstall": "npm run build"
+        "postinstall": "ng build --aot -prod"
     },
     "private": true,
     "dependencies": {
