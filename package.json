@@ -10,7 +10,7 @@
         "start": "concurrently -r \"npm run startser\" \"npm run startclient\"",
         "startser": "NODE_ENV=development DEBUG=platzi-overflow* nodemon server/index.js --exec babel-node",
         "startclient": "ng serve",
-        "startProd": "NODE_ENV=production node server/index.js",
+        "startProd": "NODE_ENV=production node index.js",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
