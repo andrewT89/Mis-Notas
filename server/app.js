@@ -18,9 +18,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-    // app.use(express.static(path.join(process.cwd(), 'dist/')));
-    const distDir = __dirname + "/dist/";
-    app.use(express.static(path.resolve(distDir)));
+    app.use(express.static(path.join(process.cwd(), 'dist')));
 
 }
 
