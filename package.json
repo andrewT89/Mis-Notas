@@ -51,7 +51,7 @@
         "express": "^4.16.3",
         "hammerjs": "^2.0.8",
         "jsonwebtoken": "^8.3.0",
-        "mongoose": "^5.3.1",
+        "mongoose": "^5.13.15",
         "mongoose-unique-validator": "^2.0.2",
         "nodemon": "^1.18.4",
         "path": "^0.12.7",
